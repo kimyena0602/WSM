@@ -47,3 +47,20 @@ li {
  li:nth-child(odd){/*홀수번째 자식인데 걔가 li인 아이 2n과 같음*/
     color: blueviolet;
  }
+
+#leader {
+    background-color: hotpink;
+}
+ .korea{
+    background-color: gold;    
+}
+.japap{
+    background-color: silver;
+}
+.incheon {
+    background-color: aqua;
+}
+
+[type="text"] { /*[속성="값"]*/
+    background-color: darkorange;
+}
