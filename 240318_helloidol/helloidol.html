@@ -38,12 +38,12 @@
     </ul>
     <h1>IVE</h1>
     <ul>
-        <li>원영</li>
-        <li>가을</li>
-        <li>이서</li>
-        <li>리즈</li>
-        <li>레이</li>
         <li id="leader" >유진</li>
+        <li class="korea taiwan" style="background-color: darkseagreen;">원영</li> <!--css보다 이렇게 html에 쓰는게 더 강함-->
+        <li class="korea incheon">가을</li>
+        <li class="korea">이서</li>
+        <li class="korea">리즈</li>
+        <li class="japan">레이</li>   
     </ul>
     <img src="https://img.hankyung.com/photo/202303/01.33048504.1.jpg" alt="사이가 좋아보이는 아이브" width="400">
     <h1>RIZE</h1>
@@ -57,5 +57,18 @@
     </ul>
     <img src="https://img3.yna.co.kr/etc/inner/KR/2023/08/22/AKR20230822056900005_01_i_P2.jpg" alt="신인 라이즈 데뷔 준비 사진" width="400">
 
+    <form action="">
+        <input type="text" name="txt" placeholder="아이디를 입력해주세욥.">
+        <input type="password" name="pw" id="">
+        <input type="button" value="버튼">
+        <input type="submit" value="서브밑">
+        <input type="checkbox" name="cb" id="탕"><label for="탕">탕후루</label> <!--*(시험)checkbox = 중복선택 가능-->
+        <input type="checkbox" name="cb" id="마"><label for="마">마라탕</label> 
+        <input type="checkbox" name="cb" id="짜"><label for="짜">짜장면</label> 
+        <input type="checkbox" name="cb" id="짬"><label for="짬">짬뽕</label> 
+        <input type="radio" name="" id="박"><label for="박">박성래</label>  <!--*(시험)radio = 중복선택 불가능-->
+        <input type="radio" name="" id="고"><label for="고">고낙은</label>
+        <input type="radio" name="" id="우"><label for="우">우호식</label> <!--label을 사용하여 텍스트에도 클릭 기능 부여-->
+    </form>
 </body>
 </html>
