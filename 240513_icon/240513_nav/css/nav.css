@@ -24,6 +24,45 @@
     /* z-index */
     --z-index: 100;
 
-    /* anv */
+    /* nav */
     --nav-height: 44px;
+}
+
+/* nav */
+body{
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+}
+
+body>header{
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+}
+nav{
+    height: var(--nav-height);
+    background-color: var(--primary-color);
+}
+.nav.container{
+    display: flex;   /* 기본 값: 가로로 배치 */
+    justify-content: space-between;    /* 메인축으로 양쪽 정렬 */
+    align-items: center;    /* 교차축으로 가운데 정렬 */
+    padding: 0 40px;
+    color: #fff;
+    font-size: var(--h2-font-size);
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+.nav-logo{
+    color:#fff;
+}
+.nav-link{
+    color: #fff;
+}
+.nav-toggle{
+    display: none;
 }
