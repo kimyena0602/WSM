@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+
 /* css Variables (변수) */
 :root {
     /* color */
@@ -65,4 +66,33 @@ nav{
 }
 .nav-toggle{
     display: none;
+}
+
+
+
+/* mobile */
+@media screen and (max-width: 600px){
+    .nav-container{
+        padding: 0 20px; /* 좌우 여백 줄이기 */
+    }
+    .nav-list{
+        position: absolute;
+        top: var(--nav-height);
+        right: 0;
+        left: 0;
+        flex-direction: column;   /* flex 방향 세로로 */
+        background-color: hsla(200, 100%, 25%, 0.6);
+    }
+    .nav-item {
+        padding: 0.5rem 1rem;    /* 위, 아래 (0.5rem) / 오/왼 (1rem) */
+        border-bottom: 2px solid white;    /* 링크의 밑줄 */
+        text-align: center;
+        width: 100%;
+    }
+    .nav-link{
+        display: block;    /* 넓어진 메뉴 아이템 너비 다 차지하자 */
+    }
+    .nav-toggle{
+        display: block;    /* 햄버거 메뉴 보이자 */
+    }
 }
