@@ -1,0 +1,15 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box; /*크기의 기준을 content -> border*/
+}
+ul,
+ol {
+    list-style: none;   /*리스트 스타일 없애자(들여쓰기, 글머리표 삭제)*/
+}
+a{
+    text-decoration: none;  /*데코레이션 삭제*/
+}
+img {
+    max-width: 100%; /* 이미지 최대 너비가 창 크기를 넘지 않도록 하자. (px 말고 %로 해야 반응형 됨.)*/
+}

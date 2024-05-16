@@ -1,1 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+/* css Variables (변수) */
+:root {
+    /* color */
+    --primary-color : hsl(160,100%,25%); /* hsl= h: 컬러, s: 채도, l: 밝기 */
+    --secondary-color: hsl(339,77%,59%);
+    --third-color: hsl(160, 100%, 30%);
+    --body-color: #fff;
+
+    /* font */
+    --body-font: "Cute Font", sans-serif;
+    --h1-font-size: 2rem; /* 크롬 > 설정 > 글자 크기 : 중간(기본값)일 때, 대문자 M의 너비(16px) = 1rem */
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.8rem;
+    --smaller-font-size: 0.6rem;
+
+    /* font weight */
+    --font-thin: 200;
+    --font-regular:400;
+    --font-bold: 700;
+
+    /* z-index */
+    --z-index: 100;
+
+    /* anv */
+    --nav-height: 44px;
+}
