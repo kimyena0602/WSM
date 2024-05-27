@@ -1,0 +1,80 @@
+#school-food {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: calc(var(--nav-height) + 100px);
+}
+
+.button-container{
+    display: flex;
+    align-items: flex-end;
+    column-gap: 20px;
+    font-size: var(--h1-font-size);
+    margin-bottom: 50px;
+}
+
+.prev-date,
+.next-date {
+    font-size: var(--h1-font-size);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;  
+}
+
+.menu-container{
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 80px;
+    row-gap: 40px;
+}
+
+.school-food-menu{
+    max-width: 300px;
+    padding: 20px;
+    flex: 1 0 200px;
+    border: 1px solid rgba(0,0,0, .25);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
+}
+
+.school-food-menu > .title{
+    margin-bottom: 20px;
+    font-size: var(--h1-font-size);
+    text-align: center;
+}
+
+.school-food-menu>.menu{
+    font-size: var(--h2-font-size);
+    text-align: center;
+}
+
+@media screen and (max-width: 960px){
+    #school-food{
+        margin-top: calc(var(--nav-height) + 40px);
+    }
+
+    .school-food-menu{
+        min-width: 100%;
+    }
+
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .menu-food:nth-child(odd){ /*홀수번째 자식 요소를 왼쪽으로 정렬*/
+        text-align: left;
+    }
+    .menu-food:nth-child(even){ /*짝수번째 자식 요소를 오른쪽으로 정렬*/
+        text-align: right;
+    }
+    .menu-food{
+        width: 50%;
+    }
+}
