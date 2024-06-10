@@ -1,26 +1,42 @@
 #school-market {
-    margin-top: calc(var(--nav-height) + 100px); /*nav에 가려져서 안 보이는 문제 해결*/
+    margin-top: calc(var(--nav-height) + 100px);    /* nav에 가려진 검색창 nav 밑으로 보냄 */
     display: flex;
-    justify-content: center;
-    flex-direction: column; /*search-container, product-container 수직 배치*/
-    align-items: center; /*교차축(수평) 가운데 정렬*/
+    flex-direction: column; /* search-container, product-container 수직 배치 */
+    align-items: center;    /* 교차축(수평) 가운데 정렬 */
     row-gap: 40px;
 }
+.search-container {
+    font-size: var(--h2-font-size);
+    background-color: #dcdcdc;
+    padding: 10px 20px; /*위, 아래: 10px, 좌,우: 20px*/
+    border-radius: 40px;
+    min-width: 400px;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    
+}
+#search-bar {
+    font-size: var(--h2-font-size);
+    border: none;   /* 입력창 외곽선 삭제 */
+    background: none;
+    outline: none;  /* 클릭해도 외곽선 삭제 */
+    padding: 10px;
+    flex-grow: 1; /*정해진 너비에 여유 공간이 있을 때 확장 (입력창 커짐)*/
+}
 
-.search-container{
-    font-size: var(--h1-font-size);
+.search-container > i{
+    margin-top: 8px; /*돋보기 높이 조절*/
 }
-#search-bar{
-    font-size: var(--h1-font-size);
-}
-.proguct-container {
+.product-container {
     border: 1px solid blue;
     width: 100px;
     height: 100px;
 }
 
-@media screen and (max-width: 600px){
-    #school-market{
-        margin-top: calc(var(--nav-height) + 40px);
+@media screen and (max-width: 600px) {
+    #school-market {
+        margin-top : calc(var(--nav-height) + 40px);
     }
 }
