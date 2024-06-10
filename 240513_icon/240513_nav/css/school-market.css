@@ -1,0 +1,26 @@
+#school-market {
+    margin-top: calc(var(--nav-height) + 100px); /*nav에 가려져서 안 보이는 문제 해결*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /*search-container, product-container 수직 배치*/
+    align-items: center; /*교차축(수평) 가운데 정렬*/
+    row-gap: 40px;
+}
+
+.search-container{
+    font-size: var(--h1-font-size);
+}
+#search-bar{
+    font-size: var(--h1-font-size);
+}
+.proguct-container {
+    border: 1px solid blue;
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (max-width: 600px){
+    #school-market{
+        margin-top: calc(var(--nav-height) + 40px);
+    }
+}

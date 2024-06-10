@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/school-market.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav container">
+            <!--로고-->
+            <a href="/" class="nav-logo">
+               <i class="bi bi-bank2"></i>
+            </a>
+            <!--학교, 매점, 기숙사-->
+            <!--<li class="nav-item"></li>-->
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">급식</a></li>
+                <li class="nav-item"><a href="shcool-market.html" class="nav-link">매점</a></li>
+                <li class="nav-item"><a href="dormitory.html" class="nav-link">기숙사</a></li>
+            </ul>
+            <!--햄버거 메뉴 or 닫기 버튼--> 
+            <!--header>nav.nav.container-->
+            <div class="nav-toggle">
+                <i class="bi bi-list"></i>
+            </div>
+        </nav>
+
+    </header>
+    
+    <main id="school-market" class="container">
+        <section class="search-container">
+            <i class="bi bi-search"></i>
+            <input type="text" name="query" id="search-bar">
+        </section>
+        <section class="product-container">
+
+        </section>
+    </main>
+    <script src="js/nav.js"></script>                            
+</body>
+</html>
