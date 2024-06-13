@@ -40,6 +40,7 @@ body>header{
     top:0;
     right: 0;
     left: 0;
+    z-index: 10;  /*position 설정하면 가려지는데 그거 방지*/
 }
 nav{
     height: var(--nav-height);

@@ -8,14 +8,13 @@
 .search-container {
     font-size: var(--h2-font-size);
     background-color: #dcdcdc;
-    padding: 10px 20px; /*위, 아래: 10px, 좌,우: 20px*/
+    padding: 10px 20px;
     border-radius: 40px;
     min-width: 400px;
     width: 90%;
     max-width: 600px;
     display: flex;
     align-items: center;
-    
 }
 #search-bar {
     font-size: var(--h2-font-size);
@@ -23,20 +22,78 @@
     background: none;
     outline: none;  /* 클릭해도 외곽선 삭제 */
     padding: 10px;
-    flex-grow: 1; /*정해진 너비에 여유 공간이 있을 때 확장 (입력창 커짐)*/
+    flex-grow: 1;   /* 정해진 너비에 여유공간이 있다면 확장됨 (입력창 커짐) */
 }
-
-.search-container > i{
-    margin-top: 8px; /*돋보기 높이 조절*/
+.search-container > i {
+    margin-top: 8px;
 }
 .product-container {
-    border: 1px solid blue;
-    width: 100px;
-    height: 100px;
+    padding: 0 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* justify-content: center; */
+    gap: 40px;
+}
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ededed;
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative; /*자손 절대 좌표의 기준 좌표가 얘로 변경*/
+}
+.product-item img {
+    height: 200px;
+    aspect-ratio: 1/1;  /* 앞:너비, 뒤:높이 비율 */
+    object-fit: contain;    /* 비율에 맞게 축소하고 나머지 여백, cover는 비율에 맞게 확대함. */
+    border-radius: 10px;
+    background-color: white;    /* 작은 이미지에 ex)무뚝뚝 둥근 사각형이 안됨 */
+}
+.product-item .name {
+    background-color: #dcdcdc;
+    padding: 4px 30px;
+    border-radius: 20px;
+    position: absolute; /* 위치조정 */
+    bottom: -20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: var(--h2-font-size);
+}
+
+@media screen and (max-width: 800px) {
+    .product-container {
+        justify-content: center;    /* 세로 한줄 일때, 왼쪽으로 치우지는 것 가운데로 정렬 */
+    }
 }
 
 @media screen and (max-width: 600px) {
     #school-market {
         margin-top : calc(var(--nav-height) + 40px);
+    }
+    .search-container{
+        font-size: var(--h3-font-size);
+    }
+    #search-bar {
+        font-size: var(--h3-font-size);
+    }
+    .search-container i{
+        font-size: var(--h3-font-size);
+        margin-top: 4px;
+    }
+    .product-item {
+        padding: 20px;
+        border-radius: 30px;
+    }
+    .product-item img {
+        height: 150px;
+        aspect-ratio: 2/1;
+    }
+    .product-item .name {
+        font-size: var(--h3-font-size);
+        border-radius: 17px;
+        bottom: -17;
     }
 }
