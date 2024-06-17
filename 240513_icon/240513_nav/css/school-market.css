@@ -62,7 +62,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     font-size: var(--h2-font-size);
 }
-
+::placeholder{
+    font-size: var(--h3-font-size); /* 조금 작게 */
+}
 @media screen and (max-width: 800px) {
     .product-container {
         justify-content: center;    /* 세로 한줄 일때, 왼쪽으로 치우지는 것 가운데로 정렬 */
