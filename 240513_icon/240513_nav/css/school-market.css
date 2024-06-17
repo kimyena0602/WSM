@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column; /* search-container, product-container 수직 배치 */
     align-items: center;    /* 교차축(수평) 가운데 정렬 */
-    row-gap: 40px;
+    row-gap: 100px;
 }
 .search-container {
     font-size: var(--h2-font-size);
