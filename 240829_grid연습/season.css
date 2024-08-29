@@ -1,0 +1,29 @@
+.container {
+    width: 800px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 35% 65%; /*= 3.5fr 6.5fr, (이건 두 속성의 비율이 같을 때)repeat(2, 1fr*/
+    grid-template-rows: 40% 60%;
+}
+.item{
+    /*border: 1px solid gray;*/
+    text-align: center;
+    /*글자 가운데로*/
+    display: grid;
+    place-items: center;
+    /* =display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+.item:first-child{
+    background-color: rgb(237, 156, 225);
+}
+.item:nth-child(2){
+    background-color: rgb(143, 225, 155);
+}
+.item:nth-child(3){
+    background-color: rgb(109, 81, 8);
+}
+.item:last-child{
+    background-color: darkslateblue;
+}
