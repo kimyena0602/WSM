@@ -1,0 +1,50 @@
+.container{
+    width: 800px;
+    height: 600px;
+    display: grid; /*열:6, 행: 11*/
+    grid-template-columns: 50px repeat(5, 1fr);
+}
+.item{
+    border: 1px solid gray;   
+    display: grid;
+    place-items: center;
+    color: olivedrab;
+    font-weight: bold;
+}
+.first-row{
+    background-color: rgb(244, 143, 115);
+}
+/* .item:nth-child(6n+7){
+    background-color: rgb(255, 239, 181);
+} */
+.mon-WSM {
+   /* grid-row: span 2; */
+    grid-row-start: 6;
+    grid-row-end: 8;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.tus-DS{
+    grid-row: span 2;
+}
+.fri-선택과목{
+    grid-row: span 2;
+}
+.thu-코테{
+    grid-row: span 2;
+}
+.fir-JAVA{
+    grid-row: span 2;
+}
+.wed-PYTHON{
+    grid-row: span 2;
+}
+.thu-JAVA{
+    grid-row: span 2;
+}
+.B{
+    grid-row: span 2;
+}
+.time{
+    background-color: rgb(255, 239, 181);
+}
