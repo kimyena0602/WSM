@@ -1,0 +1,33 @@
+#calendar-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+#calendar-container{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    border-bottom: 1px solid #555;
+}
+.item{
+    display: grid;
+    place-items: center;
+}
+.week-name{
+    font-weight: bold;
+    color: #aaa;
+    border-bottom: 1px solid #555;
+}
+.other-month{
+    color: #ddd;
+}
+.item:nth-child(7n+7){
+    color: rgb(62, 62, 246);
+}
+.item:nth-child(7n+1){ 
+    color: crimson !important;
+}
