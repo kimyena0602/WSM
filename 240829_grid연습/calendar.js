@@ -13,7 +13,7 @@ const calendarHeader = document.getElementById("calendar-header");
  const calendarHeaderH1 = calendarHeader.getElementsByTagName("h1")[0];// 시험
  //const calendarHeaderH1 = document.querySelector("#calendar-hearder h1"); // 시험
 
-
+const calendarContainerDiv = document.querySelector("#calendar-container");
 
  //이전/다음 버튼 클릭했을 때 이전/다음달로 변경하자
 //HTML -> JS 변수 가져오자
@@ -39,4 +39,54 @@ const changeMonth = (diff) => {
     calendarHeaderH1.innerHTML = `<i>${year}년 ${month + 1}월</i>`;
     
 }
+
+const setCalendar = (date) => {
+
+    //현재 년
+    const year = date.getFullYear();
+
+    //현재 월
+    const month = date.getMonth();
+
+    //이번 달 마지막 날짜 구하자
+    const lastDate = new Date(year, month + 1, 0);
+    const lastDateDate = lastDate.getDate(); //다음 달 1일의 전날 => 현재 년, 월+1, 1-1
+
+    // let weekNameString = `<div class="item week-name">일</div>
+    //     <div class="item week-name">월</div>
+    //     <div class="item week-name">화</div>
+    //     <div class="item week-name">수</div>
+    //     <div class="item week-name">목</div>
+    //     <div class="item week-name">금</div>
+    //     <div class="item week-name">토</div>`;
+
+    // calendarContainerDiv.innerHTML = weekNameString;
+
+    let weekNameString = "";
+    const weekNames = "일월화수목금토"; // -> ["일", "월", "화"..."토"]
+    const weekNamesArray = weekNames.split("");
+    weekNamesArray.forEach((weekName) => {
+        weekNameString += `<div class = "item week-name">${weekName}</div>`;
+    });
+
+    calendarContainerDiv.innerHTML = weekNameString;
+
+    //이전달의 뒷 날짜 표시하자
+
+    
+    //이번 달의 모든 날짜 표시하자(1~마지막 날짜)
+    for (let date = 1; date <= lastDateDate; date++) {
+        let currentMonthDateDiv = document.createElement("div"); //<div></div>
+        currentMonthDateDiv.className = "item";                  //<div class = "item"></div>
+        currentMonthDateDiv.textContent = date;                  //<div class = "item">날짜</div>
+        console.log(currentMonthDateDiv);
+        calendarContainerDiv.appendChild(currentMonthDateDiv);   //<div id = "calendar-container"><div class = "item">날짜</div></div>
+
+         
+        
+    }
+    //다음 달의 앞 날짜 표시하자
+}
 changeMonth(0); //현재 달 출력하자
+
+setCalendar(currentDate);
