@@ -51,6 +51,8 @@ const setCalendar = (date) => {
     //이번 달 마지막 날짜 구하자
     const lastDate = new Date(year, month + 1, 0);
     const lastDateDate = lastDate.getDate(); //다음 달 1일의 전날 => 현재 년, 월+1, 1-1
+    //이번달 마지막 날짜의 요일
+    const lastDay = lastDate.getDay(); //요일
 
     // let weekNameString = `<div class="item week-name">일</div>
     //     <div class="item week-name">월</div>
@@ -85,7 +87,20 @@ const setCalendar = (date) => {
          
         
     }
-    //다음 달의 앞 날짜 표시하자
+
+//다음 달의 앞 날짜 표시하자(1~6-(이번 달 마지막 날짜의 요일과 관련))
+    for (let date = 1; date <= 6-lastDay; date++) {
+        let currentMonthDateDiv = document.createElement("div"); //<div></div>
+        currentMonthDateDiv.className = "item other-month";      //<div class = "item other-month"></div>
+        currentMonthDateDiv.textContent = date;                  //<div class = "item other-month">날짜</div>
+        console.log(currentMonthDateDiv);
+        calendarContainerDiv.appendChild(currentMonthDateDiv);   //<div id = "calendar-container"><div class = "item other-month">날짜</div></div>
+
+         
+        
+    }
+    //다음 달의 앞 날짜 표시하자(1~6-(이번 달 마지막 날짜의 요일과 관련))
+
 }
 changeMonth(0); //현재 달 출력하자
 
