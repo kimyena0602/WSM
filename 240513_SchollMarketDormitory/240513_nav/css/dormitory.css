@@ -1,6 +1,45 @@
 main {
-    margin-top: calc(var(--nav-height) + 10px);
+    margin: 0 auto; /*1. 가운데 맞추자*/
+    margin-top: calc(var(--nav-height) + 40px); /*2. 위에서 띄우자*/
+}
+
+#dormitory{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: min(100%, 600px); /*위 아래꺼가 같은 뜻임.(시험)*/ /*브라우저 너비가 600px 초과면 600px, 미만이면 그 크기*/
+}
+#dormitory > h1 {
+    font-size: var(--h1-font-size);
+    text-align: center;
+    margin-bottom: 40px; 
+}
+#dormitory #selection-container {
+    margin: 0 auto; /*수평 가운데로*/
+    margin-bottom: 80px;
     font-size: var(--h2-font-size);
+    display: flex;
+    width: 330px;
+    padding: 5px 10px;
+    justify-content: center;
+    column-gap: 10px;
+    background-color: #a0d49c;
+    border-radius: 40px;
+    box-shadow: 0 2px 2px rgb(0, 0, 0,25%);
+}
+
+.selection-item{
+    padding: 5px 15px;
+    column-gap: 40px;
+
+
+}
+.selection-item:hover,
+.select {
+    background-color: white;
+    cursor: pointer;
+    border-radius: 40px;
+    box-shadow: 0 2px 2px rgb(0, 0, 0,25%); ;
 }
 
 #calendar-header{
@@ -13,10 +52,12 @@ main {
 #calendar-container{
     display:grid;
     grid-template-columns: repeat(7, 1fr);
-    width: 600px;
+    /* width: 100%;
+    max-width: 600px; */
     height: 400px;
     margin: 0 auto;
     border-bottom: 1px solid #555;
+    font-size: var(--h3-font-size);
 }
 .item{
     display: grid;
