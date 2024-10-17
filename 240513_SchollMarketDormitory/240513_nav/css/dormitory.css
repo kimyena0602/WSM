@@ -41,7 +41,9 @@ main {
     border-radius: 40px;
     box-shadow: 0 2px 2px rgb(0, 0, 0,25%); ;
 }
-
+#calendar{
+    display: none;
+}
 #calendar-header{
     display: flex;
     justify-content: center;
@@ -76,4 +78,23 @@ main {
 }
 .item:nth-child(7n+1){ 
     color: crimson !important;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+#dormitory select{
+    font-size: var(--h3-font-size);
+    border: none;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+}
+.btn {
+    font-size: var(--h2-font-size);
+    padding: 5px 20px;
+    margin-top: 20px;
+    float: right;
 }
