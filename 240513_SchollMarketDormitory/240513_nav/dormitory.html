@@ -43,48 +43,65 @@
             <div class="selection-item">호실 이름</div>
         </div>
 
-
         <div id="calendar">
+            <!-- 요일 지정 -->
             <div id="calendar-header">
                 <button id="prev-month">이전</button>
                 <h1></h1>
                 <button id="next-month">다음</button>
             </div>
-            <div id="calendar-container">
-                
-            </div>
+
+            <!-- 달력 => js으로 가져올거임 -->
+            <div id="calendar-container"></div>
         </div>
 
         <div id="selection-washingmachine-time">
-            <!--시간선택-->
-            <div class="flex-container">
+            <!-- 시간선택 -->
+             <div class="flex-container">
                 <div class="selection-washingmachine">
-                    
-                    <select name="washingmachine" id="washingmachine">
+                    <select name="" id="washingmachine">
                         <option value="1">1번 세탁기</option>
                         <option value="2">2번 세탁기</option>
                         <option value="3">3번 세탁기</option>
                     </select>
                 </div>
                 <div class="selection-time">
-                    <!--select#time>option*3-->
-                    <select name="" id="time">
+                    <select name="time" id="time">
                         <option value="1">7시 ~ 8시 10분</option>
                         <option value="2">8시 10분 ~ 9시 20분</option>
                         <option value="3">9시 20분 ~ 10시 30분</option>
                     </select>
-
                 </div>
-            </div>
-            <button class="btn">다음</button>
-
+             </div>
+             <button class="btn">다음</button>
         </div>
 
         <div id="selection-room-name">
-            <!--호실이름-->
+            <!-- 호실 이름 -->
+            <div class="flex-container">
+                <div class="selection-room">
+                    <select name="room" id="room">
+                        <!-- option[value=$@401]{$@401호}*18 -->
+                        <option value="1">401호</option>
+                        <option value="2">402호</option>
+                        <option value="3">403호</option>
+                        <option value="4">404호</option>
+                        <option value="5">405호</option>
+                        <option value="401">501호</option>
+                        <option value="402">502호</option>
+                        <option value="403">503호</option>
+                        <option value="404">504호</option>
+                        <option value="405">505호</option>
+                    </select>
+                </div>
+                <div class="input-name">
+                       <input type="text" id="name" name="name" placeholder="이름을 입력하세요.">
+                </div>
+             </div>
+             <button class="btn">다음</button>
         </div>
     </main>
-    
+
     <script src="js/nav.js"></script>
     <script src="js/dormitory.js"></script>
 </body>

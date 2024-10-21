@@ -85,7 +85,8 @@ main {
     justify-content: center;
     column-gap: 20px;
 }
-#dormitory select{
+#dormitory select, 
+#dormitory input {
     font-size: var(--h3-font-size);
     border: none;
     border-radius: 20px;
@@ -97,4 +98,8 @@ main {
     padding: 5px 20px;
     margin-top: 20px;
     float: right;
+}
+
+#selection-washingmachine-time {
+    display: none;
 }
