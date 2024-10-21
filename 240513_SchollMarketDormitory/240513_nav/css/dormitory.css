@@ -29,7 +29,7 @@ main {
 }
 
 .selection-item{
-    padding: 5px 15px;
+    padding: 5px 5px;
     column-gap: 40px;
 
 
@@ -41,9 +41,7 @@ main {
     border-radius: 40px;
     box-shadow: 0 2px 2px rgb(0, 0, 0,25%); ;
 }
-#calendar{
-    display: none;
-}
+
 #calendar-header{
     display: flex;
     justify-content: center;
@@ -73,20 +71,20 @@ main {
 .other-month{
     color: #ddd;
 }
-.item:nth-child(7n+7){
+/* .item:nth-child(7n+7){
     color: rgb(62, 62, 246);
 }
 .item:nth-child(7n+1){ 
     color: crimson !important;
-}
+} */
 
 .flex-container{
     display: flex;
     justify-content: center;
     column-gap: 20px;
 }
-#dormitory select, 
-#dormitory input {
+#dormitory select,
+#dormitory input{
     font-size: var(--h3-font-size);
     border: none;
     border-radius: 20px;
@@ -100,6 +98,23 @@ main {
     float: right;
 }
 
-#selection-washingmachine-time {
+#selection-washingmachine-time,
+#selection-room-name,
+#calendar{
     display: none;
 }
+.board-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+#board .header{
+    background-color: rgb(232, 205, 171);
+}
+#board .item{
+    color: black;
+    border: 1px solid gray;
+    height: 30px;
+}
+
+
