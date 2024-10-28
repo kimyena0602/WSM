@@ -36,6 +36,7 @@ main {
 }
 .selection-item:hover,
 .select {
+    
     background-color: white;
     cursor: pointer;
     border-radius: 40px;
