@@ -100,7 +100,8 @@ main {
 
 #selection-washingmachine-time,
 #selection-room-name,
-#calendar{
+#calendar,
+#board{
     display: none;
 }
 .board-container{
