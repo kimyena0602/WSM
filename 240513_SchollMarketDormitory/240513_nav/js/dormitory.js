@@ -64,5 +64,19 @@ const setPage = (page) => {
     //show page
     pageDivs[page-1].style.display = "block";  //1페이지: calendar, 2페이지: swt, 3페이지: srn, 4페이지: board
 }
+const clickDate = (event) => {
+    console.log(event.target.dataset.data); //<div class = "item" data-date = "무언가"> 텍스트 </div> => 무언가
+    newReservation ={  //날짜, 세탁기, 시간, 호실, 이름, 알림
+        "date": undefined,
+        "washingmachine": undefined,
+        "time": undefined,
+        "room": undefined,
+        "name": undefined,
+        "notification" : true,
+    }
+    newReservation.date = event.target.dataset.date; //클릭한 날짜 정보 새 예약에 기록하자
+    setPage(2); // 2페이지로 이동
+    
+}
 initData();
 setPage(1);
