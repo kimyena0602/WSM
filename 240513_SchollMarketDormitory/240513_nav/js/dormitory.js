@@ -70,6 +70,14 @@ const setPage = (page) => {
 
     if(page===1){
         //LocalStorage에서 가져오자
+        let storedReservations = localStorage.getItem("reservations");
+        if(storedReservations) { //저장된 reservation이 있으면
+            reservations = storedReservations;
+            reservations = JSON.parse(storedReservations); //string -> JSON
+            reservations.map((reservation)=> reservation.date = new Data(reservation.date));//reservations에서 하나 꺼내서 .data에 있는 string -> Data 객체로 바꾸고 다시 .data에 넣자
+        }else { //없으면
+            reservations = [];
+        }
 
     }
     else if (page === 2) {    //세탁기, 시간
@@ -77,8 +85,7 @@ const setPage = (page) => {
     } else if (page === 3) { // 호실, 이름
         //세탁기, 시간 번호 기록하자
         newReservation.washingmachine = washingmachineSelect.value;
-        newReservation.time = timeSelect.value;ㄴ
-
+        newReservation.time = timeSelect.value;
         initRoomName();
     } else if (page === 4) {  //세탁기 예약 현황표
         //호실, 이름 기록
@@ -213,7 +220,7 @@ const initTable = () => {
     });
     boardContainerDiv.innerHTML=tableString;
 }
-const saveReservations=()=> {
+const saveReservations = () => {
     //원래는 백엔드에 reservation에 넘겨 저장인데, 우리는 LocalStorage에 저장할것
     localStorage.setItem("reservations", JSON.stringify(reservations)); //json 객체 -> string (문자열화)
     //저장완료 창 띄우자
